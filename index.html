@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandma's Surprise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff4500;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #2e8b57;
+            display: none;
+        }
+
+        #revealButton {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #revealButton:hover {
+            background-color: #ff6347;
+        }
+
+        .image-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi Grandma!</h1>
+    <p>We have a special surprise for you. Click the button below to reveal it!</p>
+    <button id="revealButton">Reveal the Surprise</button>
+
+    <p id="message">We're taking you to the beach on <strong>June 21, 2025</strong>! Get ready for a sunny adventure filled with love, laughter, and family fun! 🌞🏖️</p>
+
+    <div class="image-container" id="imageContainer">
+        <img src="https://via.placeholder.com/500x300.png?text=See+You+at+the+Beach%21" alt="Beach Scene">
+    </div>
+
+    <script>
+        const revealButton = document.getElementById('revealButton');
+        const message = document.getElementById('message');
+        const imageContainer = document.getElementById('imageContainer');
+
+        revealButton.addEventListener('click', () => {
+            message.style.display = 'block';
+            imageContainer.style.display = 'block';
+            revealButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
